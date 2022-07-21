@@ -12,6 +12,11 @@ Envoyer les fichiers sur Github
 
     git push
 
+Création d'un fichier bash pour automatiser certaines tâches :
+
+(*Attention: suivant la config de Vscode le fichier peut poser problème, dans ce cas écrire le fichier dans l'éditeur de texte par défaut de l'OS*)
+
+Nom du fichier : [Makefile](Makefile)
 
 ## 02. Configuration de l'environnement de prod / staging
 
@@ -48,6 +53,12 @@ Installation des dépendances via composer
     composer install
 
 ## 04. Création et push du fichier .env
+
+**De retour en local, à la racine du site**, copier/coller le fichier .env.example => .env.prod et renseigner les données de production (ou staging).
+
+Envoyer le fichier .env.prod sur le serveur distant (*voir fichier Makefile en haut de la page, pour comprendre la commande...*)
+
+    deployenv
 
 ## 05. Installation wordpress du site en prod/staging
 
