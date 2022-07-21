@@ -40,8 +40,6 @@ https://bastet.o2switch.net:2083/
 
 *(Prérequis: installer composer sur l'hébergement : https://faq.o2switch.fr/hebergement-mutualise/installation-composer-o2switch)*
 
-    composer install --no-dev --optimize-autoloader
-
 Utiliser la commande de déploiement ([voir Makefile](Makefile))
 
     make deploy
