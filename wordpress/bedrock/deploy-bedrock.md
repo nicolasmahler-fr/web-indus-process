@@ -44,7 +44,7 @@ Utiliser la commande de déploiement ([voir Makefile](Makefile))
 
     make deploy
 
-  *Concrètement, commande permet de **se connecter en SSH à l'hébergement**, **cloner le repo github dans le dossier d'installation** et **installer les dépendances via composer (sans le dev)***
+  *Concrètement, la commande permet de **se connecter en SSH à l'hébergement**, **cloner le repo github dans le dossier d'installation** et **installer les dépendances via composer (sans le dev)***
 
 ## 04. Modification du dossier d'installation du site.
 
