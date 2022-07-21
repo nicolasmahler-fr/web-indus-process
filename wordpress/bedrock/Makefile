@@ -12,6 +12,7 @@ localdumppath=/var/vhosts/monsite.test/db/
 help: ## Affiche cette aide
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 	
-deployenv: ## Déploie le fichier .env.prod sur le serveur distant et le renomme en .env
+deploy: ## Déploiement initial de l'APP (git clone du repo) + envoi du fichier .env sur le serveur (sans le versionner)
+	ssh $(ssh) "cd $(path); git clone $(gitaccount)$(gitrepo).git .; composer install --no-dev --optimize-autoloader"
 	rsync -av .env.prod $(ssh):$(path)
 	ssh $(ssh) "cd $(path); mv .env.prod .env"

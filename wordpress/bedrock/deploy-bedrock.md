@@ -38,41 +38,23 @@ https://bastet.o2switch.net:2083/
 
 ## 03. Installation du site sur le serveur de prod / staging
 
-Connexion SSH à l'hébergement
-
-    ssh login@domaine.ext  -p 22
-
-Aller dans le dossier d'installation du site (exemple):
-
-    cd public_html/monsite.fr/www
-
-Pull le dossier github directement dans le dossier (sans créer de sous-dossier, d'où le point à la fin de la commande)
-
-    git clone https://github.com/nicolasmahler-fr/monsite.git .
-
-Installation des dépendances via composer (sans le dev)
-
 *(Prérequis: installer composer sur l'hébergement : https://faq.o2switch.fr/hebergement-mutualise/installation-composer-o2switch)*
 
     composer install --no-dev --optimize-autoloader
 
-## 04. Création et push du fichier .env
+Utiliser la commande de déploiement ([voir Makefile](Makefile))
 
-**De retour en local, à la racine du site**, copier/coller le fichier .env.example => .env.prod et renseigner les données de production (ou staging).
+    make deploy
 
-Envoyer le fichier .env.prod sur le serveur distant (*voir fichier Makefile en haut de la page, pour comprendre la commande...*)
+* Concrètement, commande permet de **se connecter en SSH à l'hébergement**, **cloner le repo github dans le dossier d'installation** et **installer les dépendances via composer (sans le dev)**
 
-    make deployenv
-
-*Alternativement, on peut se connecter à Cpanel et créer manuellement le fichier.*
-
-## 05. Modification du dossier d'installation du site.
+## 04. Modification du dossier d'installation du site.
 
 Maintenant que les fichiers sont bien sur le serveur, on se connecte à CPanel et on modifie le chemin d'installation du domaine (en ajoutant le dossier web à la suite).
 
 Exemple, si on avait : **public_html/monsite.fr/www** on passe à : **public_html/monsite.fr/www/web**
 
-## 06. Installation wordpress du site en prod/staging
+## 05. Installation wordpress du site en prod/staging
 
 Dans le navigateur :  
 http://monsite.test
