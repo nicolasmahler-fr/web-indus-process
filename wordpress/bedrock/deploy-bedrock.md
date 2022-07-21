@@ -20,6 +20,8 @@ Penser à modifier les variables (l.3 à l.10)
 
 Nom du fichier : [Makefile](Makefile)
 
+**!!! ATTENTION A BIEN AJOUTER LE FICHIER MAKEFILE DANS LE FICHIER .GITIGNORE !!!**
+
 ## 02. Configuration de l'environnement de prod / staging
 
 *****************
@@ -31,7 +33,7 @@ https://bastet.o2switch.net:2083/
 
 * Installer le domaine / sous-domaine (**NE PAS FAIRE POINTER LE SITE SUR LE DOSSIER WEB DE BEDROCK POUR LE MOMENT** (=> sinon problème pour cloner le dépot github))
 * Activer certificat SSL Let's Encrypt (optionnel)
-* Créer une base de domaine
+* Créer une base de données MySql
 * Créer un utilisateur associé à la BDD et accorder les droits
 
 ## 03. Installation du site sur le serveur de prod / staging
@@ -60,9 +62,9 @@ Installation des dépendances via composer
 
 Envoyer le fichier .env.prod sur le serveur distant (*voir fichier Makefile en haut de la page, pour comprendre la commande...*)
 
-    deployenv
+    make deployenv
 
-Alternativement, on peut se connecter à Cpanel et créer manuellement le fichier.
+*Alternativement, on peut se connecter à Cpanel et créer manuellement le fichier.*
 
 ## 05. Modification du dossier d'installation du site.
 
