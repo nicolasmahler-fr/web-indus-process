@@ -16,6 +16,8 @@ Création d'un fichier bash pour automatiser certaines tâches :
 
 (*Attention: suivant la config de Vscode le fichier peut poser problème, dans ce cas écrire le fichier dans l'éditeur de texte par défaut de l'OS*)
 
+Penser à modifier les variables (l.3 à l.10)  
+
 Nom du fichier : [Makefile](Makefile)
 
 ## 02. Configuration de l'environnement de prod / staging
@@ -27,7 +29,7 @@ Connexion à CPanel :
 
 https://bastet.o2switch.net:2083/
 
-* Installer le domaine / sous-domaine 
+* Installer le domaine / sous-domaine (**NE PAS FAIRE POINTER LE SITE SUR LE DOSSIER WEB DE BEDROCK POUR LE MOMENT** (=> sinon problème pour cloner le dépot github))
 * Activer certificat SSL Let's Encrypt (optionnel)
 * Créer une base de domaine
 * Créer un utilisateur associé à la BDD et accorder les droits
@@ -60,7 +62,15 @@ Envoyer le fichier .env.prod sur le serveur distant (*voir fichier Makefile en h
 
     deployenv
 
-## 05. Installation wordpress du site en prod/staging
+Alternativement, on peut se connecter à Cpanel et créer manuellement le fichier.
+
+## 05. Modification du dossier d'installation du site.
+
+Maintenant que les fichiers sont bien sur le serveur, on se connecte à CPanel et on modifie le chemin d'installation du domaine (en ajoutant le dossier web à la suite).
+
+Exemple, si on avait : **public_html/monsite.fr/www** on passe à : **public_html/monsite.fr/www/web**
+
+## 06. Installation wordpress du site en prod/staging
 
 Dans le navigateur :  
 http://monsite.test

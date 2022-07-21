@@ -13,5 +13,5 @@ help: ## Affiche cette aide
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 	
 deployenv: ## Déploie le fichier .env.prod sur le serveur distant et le renomme en .env
-	rsync -av .env.example $(ssh):$(path)
+	rsync -av .env.prod $(ssh):$(path)
 	ssh $(ssh) "cd $(path); mv .env.prod .env"
