@@ -50,11 +50,11 @@ Pull le dossier github directement dans le dossier (sans créer de sous-dossier,
 
     git clone https://github.com/nicolasmahler-fr/monsite.git .
 
-Installation des dépendances via composer
+Installation des dépendances via composer (sans le dev)
 
 *(Prérequis: installer composer sur l'hébergement : https://faq.o2switch.fr/hebergement-mutualise/installation-composer-o2switch)*
 
-    composer install
+    composer install --no-dev --optimize-autoloader
 
 ## 04. Création et push du fichier .env
 
