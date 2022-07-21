@@ -1,8 +1,8 @@
-# Industrialisation de site Wordpress avec Bedrock
+# Setup un projet Bedrock en local
 
-## 01. Setup le projet en local
+## Bdd et domaine local
 - Créér une base de données dans phpmaydmin (http://localhost/phpmyadmin)
-- [Configurer un domaine local (virtual host)](../vhost.md) 
+- [Configurer un domaine local (virtual host)](../../ressources/vhost.md) 
 
 ## 02. Télécharger Bedrock
 

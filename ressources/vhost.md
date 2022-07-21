@@ -1,4 +1,4 @@
-# Créer un domaine local (Ubuntu)
+# Créer un domaine local (Ubuntu + Apache)
 
 
 ## 1. Ajouter le domaine
