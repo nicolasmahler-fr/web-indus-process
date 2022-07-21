@@ -42,7 +42,9 @@ https://bastet.o2switch.net:2083/
 
 Utiliser la commande de déploiement ([voir Makefile](Makefile))
 
-    make deploy
+Pour l'environnement de PRODUCTION :
+
+    make deployprod
 
   *Concrètement, la commande permet de **se connecter en SSH à l'hébergement**, **cloner le repo github dans le dossier d'installation** et **installer les dépendances via composer (sans le dev)***
 
